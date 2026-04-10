@@ -7,6 +7,3 @@ export const loggerMiddleware = (req: Request, res: Response, next: NextFunction
 
     next();
 }
-
-//dipake buat register aja
-//router.post("/register", validateRegister, createUser); buat di routesnya
