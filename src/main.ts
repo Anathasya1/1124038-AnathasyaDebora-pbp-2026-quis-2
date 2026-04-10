@@ -10,8 +10,7 @@ import { loggerMiddleware } from "./middlewares/loggerMiddleware";
 const app = express();
 
 app.use(express.json());
-app.use(loggerMiddleware); //kalau ada
-app.use(cors());
+app.use(loggerMiddleware); 
 
 app.use('/api', globalApi);
 
@@ -35,6 +34,4 @@ app.listen(PORT, () => {
     console.log("Server is Running")
 });
 
-function cors(): any {
-    throw new Error("Function not implemented.");
-}
+

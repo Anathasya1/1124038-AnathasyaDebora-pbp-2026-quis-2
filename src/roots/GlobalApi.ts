@@ -1,14 +1,11 @@
 import { Router } from "express";
-import { authMiddleware } from "../middlewares/authMiddleware";
+import PostsRoutes from './PostsRoutes'
+import CommentsRoutes from "./CommentsRoutes"
+
 
 const router: Router = Router();
 
-// Public
-//router.use("/auth", AuthenticationRoutes);
-
-// Private
-//router.use("/tableInformation", authMiddleware, TableInformationRoutes)
-//router.use("/staff", authMiddleware, StaffRoutes);
-// router.use("/staff", StaffRoutes);
+router.use("/post", PostsRoutes);
+router.use("/post-comment", CommentsRoutes);
 
 export default router; 
